@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
-    - kedro >=0.18.1,<0.19.0
+    - python >=3.8
+    - kedro >=0.19.1,<0.20.0
 
 test:
   imports:
