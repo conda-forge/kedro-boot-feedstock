@@ -1,5 +1,5 @@
 {% set name = "kedro-boot" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/takikadiri/kedro-boot/archive/{{ version }}.tar.gz
-  sha256: b46f27965f8ad4a44595ebccddde72aa4be5ee6bf21ae0c4ba8bc4c7af076a02
+  sha256: c3f6669755c7e99d811bd454c647c0acb0b18680177a80491d606f86ba27e4b1
 
 build:
   noarch: python
