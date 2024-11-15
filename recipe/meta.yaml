@@ -1,5 +1,5 @@
 {% set name = "kedro-boot" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/takikadiri/kedro-boot/archive/{{ version }}.tar.gz
-  sha256: c3f6669755c7e99d811bd454c647c0acb0b18680177a80491d606f86ba27e4b1
+  sha256: 80c27c65a9c89162028a9d4bb4711e538b9f897a5e38adfbdfaef0464acfc2e7
 
 build:
   noarch: python
@@ -16,10 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - kedro >=0.19.1,<0.20.0
 
 test:
@@ -28,6 +29,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
